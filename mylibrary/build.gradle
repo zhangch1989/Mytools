@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'//添加
+
+
+//tasks.withType(JavaCompile){
+//    options.encoding = "UTF-8"
+//    options.compilerArgs << "-Xlint:unchecked"
+//}
+tasks.withType(JavaCompile){
+    options.encoding = "UTF-8"
+}
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+//添加
+publish {
+    userOrg = 'zhangch1989'//bintray.com用户名
+    groupId = 'com.zhangch1989'//jcenter上的路径
+    artifactId = 'mylibrary'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+    website = 'https://github.com/zhangch1989/mylibrary'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
+
+
