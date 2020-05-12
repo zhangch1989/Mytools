@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 时间选择控件 -->
+    <dimen name="font_size_4">15.5dp</dimen>
+    <dimen name="timeselect_title_size">16dp</dimen>
+    <dimen name="timeselect_button_size">15dp</dimen>
+    <dimen name="timeselect_top_height">40dp</dimen>
+</resources>
