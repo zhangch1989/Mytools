@@ -25,7 +25,9 @@ xml文件
 
     <include layout="@layout/load_more"/>
 </com.zch.mylibrary.pullload.PullToRefreshLayout>
-
+~~~
+Java中的刷新数据方法调用
+~~~
 refreshLayout = (PullToRefreshLayout) view.findViewById(R.id.refresh_view);
 refreshLayout.setOnRefreshListener(new PullToRefreshLayout.OnRefreshListener() {
             @Override
@@ -50,12 +52,12 @@ refreshLayout.setOnRefreshListener(new PullToRefreshLayout.OnRefreshListener() {
         });
 ~~~
 ## 2.新增时间选择控件
-调用方式：
+具体使用方法
 ~~~
   public static void setDatetime(Context context, final EditText et, String nowtime, int type){}//用于EditText点击显示
   public static void setDatetime(Context context, final TextView tv, String nowtime, int type){}//用于TextView点击显示
 ~~~
-具体使用方法
+调用方式：
 ~~~
 et_reserve.setOnClickListener(new View.OnClickListener() {
             @Override
