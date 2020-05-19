@@ -6,6 +6,7 @@ compile 'com.zhangch1989:mylibrary:1.1.0'
 1.新建的tools，测试upload到jcenter的maven中心（包含了pullrefres的各种控件，listview，GridView，ScrollView等）
 使用方式：
 xml文件
+
 <com.zch.mylibrary.pullload.PullToRefreshLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/refresh_view"
@@ -51,6 +52,7 @@ refreshLayout.setOnRefreshListener(new PullToRefreshLayout.OnRefreshListener() {
   public static void setDatetime(Context context, final EditText et, String nowtime, int type){}//用于EditText点击显示
   public static void setDatetime(Context context, final TextView tv, String nowtime, int type){}//用于TextView点击显示
 具体使用方法
+​
 et_reserve.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,3 +63,6 @@ et_reserve.setOnClickListener(new View.OnClickListener() {
                 DateUtils.setDatetime(context, et_reserve, time, TimeConfig.YEAR_MONTH_DAY_HOUR_MINUTE);
             }
         });
+
+​
+
